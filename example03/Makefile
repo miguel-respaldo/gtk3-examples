@@ -10,10 +10,10 @@ OBJS = $(SRC:.c=.o)
 all: example3
 
 %.o: %.c
-	$(CC) -c -o $(@F) $(CFLAGS) $<
+	$(CC) $(CFLAGS) -c -o $(@F)  $<
 
 example3: $(OBJS)
-	$(CC) -o $(@F) $(LIBS) $(OBJS)
+	$(CC) $(LIBS) -o $(@F) $(OBJS)
 
 clean:
 	rm -f $(OBJS)
